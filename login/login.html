@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - ULEAM</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">
+      <div class="logo-icon">U</div>
+      <div class="logo-text">
+        <h2>ULEAM</h2>
+        <p>Prácticas Preprofesionales</p>
+      </div>
+    </div>
+
+    <h1>Iniciar Sesión</h1>
+    <p class="subtext">Ingrese sus credenciales institucionales</p>
+
+    <form id="loginForm">
+      <label for="email">Usuario / Correo Electrónico</label>
+      <div class="input-group">
+        <span>📧</span>
+        <input type="email" id="email" placeholder="usuario@uleam.edu.ec" required>
+      </div>
+
+      <label for="password">Contraseña</label>
+      <div class="input-group">
+        <span>🔒</span>
+        <input type="password" id="password" placeholder="••••••••" required>
+      </div>
+
+      <div class="extras">
+        <label><input type="checkbox" id="remember"> Recordar sesión</label>
+        <a href="#">¿Olvidó su contraseña?</a>
+      </div>
+
+      <button type="submit" class="btn-login">Iniciar Sesión</button>
+    </form>
+
+    <p class="footer">
+      ¿Necesita ayuda? Contacte al <a href="#">Soporte Técnico</a>
+    </p>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Gestión de Estudiantes</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+      <h1>Gestión de Estudiantes</h1>
+      <button onclick="location.href='../dashboard/dashboard.html'">Volver al Panel</button>
+  </header>
+  
+  <main>
+    <div class="controls">
+      <input id="search" type="text" placeholder="Buscar estudiante...">
+      <button id="btnNuevo" class="btn-primary">+ Nuevo Estudiante</button>
+    </div>
+
+    <table id="tabla">
+      <thead>
+        <tr>
+          <th>Cédula</th>
+          <th>Nombre</th>
+          <th>Carrera</th>
+          <th>Email</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Nuevo Estudiante</h2>
+      <form id="formEstudiante">
+        <label>Cédula: <input type="text" id="cedula" required pattern="[0-9]{10}"></label>
+        <label>Nombre: <input type="text" id="nombre" required></label>
+        <label>Carrera: <input type="text" id="carrera" required></label>
+        <label>Email: <input type="email" id="email" required></label>
+        <button type="submit" class="btn-primary">Guardar</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // --- Botón de regreso al Dashboard ---
+    document.getElementById("btnVolver").addEventListener("click", () => {
+      // Verificamos si la ruta existe antes de redirigir
+      const ruta = "../dashboard/dashboard.html";
+      fetch(ruta, { method: "HEAD" })
+        .then((res) => {
+          if (res.ok) {
+            window.location.href = ruta;
+          } else {
+            alert("⚠️ No se encuentra el archivo del Dashboard. Verifica la ruta o el nombre del archivo.");
+          }
+        })
+        .catch(() => alert("⚠️ Error al intentar volver al Dashboard. Verifica la carpeta."));
+    });
+  </script>
+
+  <script src="estudiantes.js"></script>
+</body>
+</html>

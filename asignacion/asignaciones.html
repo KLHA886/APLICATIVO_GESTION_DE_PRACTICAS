@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Asignación de Prácticas</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <h1>Asignación de Prácticas</h1>
+    <button onclick="location.href='../dashboard/dashboard.html'">Volver al Panel</button>
+  </header>
+  <main>
+    <div class="controls">
+      <input id="search" type="text" placeholder="Buscar asignación...">
+      <button id="btnNuevo" class="btn-primary">+ Nueva Asignación</button>
+    </div>
+    
+    <table id="tabla">
+      <thead>
+        <tr>
+          <th>Estudiante</th>
+          <th>Empresa</th>
+          <th>Tutor</th>
+          <th>Inicio</th>
+          <th>Fin</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <div id="modal" class="modal" style="display:none">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Nueva Asignación</h2>
+      <form id="formAsignacion">
+        <label>Estudiante:
+          <select id="estudiante" required>
+            <option value="">Seleccione...</option>
+          </select>
+        </label>
+        <label>Empresa:
+          <select id="empresa" required>
+            <option value="">Seleccione...</option>
+          </select>
+        </label>
+        <label>Tutor: <input type="text" id="tutor" required></label>
+        <label>Fecha Inicio: <input type="date" id="inicio" required></label>
+        <label>Fecha Fin: <input type="date" id="fin" required></label>
+        <label>Estado:
+          <select id="estado" required>
+            <option value="En curso">En curso</option>
+            <option value="Finalizada">Finalizada</option>
+            <option value="Pendiente">Pendiente</option>
+          </select>
+        </label>
+        <button type="submit" class="btn-primary">Guardar</button>
+      </form>
+    </div>
+  </div>
+  <script src="asignacion.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gestión de Prácticas</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Panel de Control</h1>
+    <p>Administrador del sistema</p>
+    <button id="btnCerrarSesion" class="btn-back">Cerrar Sesión</button>
+  </header>
+
+  <main class="container">
+    <section class="cards">
+      <div class="card"><h3>Estudiantes</h3><p id="estudiantesCount">0</p></div>
+      <div class="card"><h3>Empresas</h3><p id="empresasCount">0</p></div>
+      <div class="card"><h3>Tutores</h3><p id="tutoresCount">0</p></div>
+      <div class="card"><h3>Prácticas</h3><p id="practicasCount">0</p></div>
+    </section>
+
+    <section class="links">
+      <button onclick="location.href='../estudiantes/estudiantes.html'">Gestión de Estudiantes</button>
+      <button onclick="location.href='../empresas/empresas.html'">Gestión de Empresas</button>
+      <button onclick="location.href='../tutores/tutores.html'">Gestión de Tutores</button>
+      <button onclick="location.href='../asignacion/asignaciones.html'">Asignación de Prácticas</button>
+      <button onclick="location.href='../reportes/reportes.html'">Reportes</button>
+      <button onclick="location.href='../configuracion/configuracion.html'">Configuración</button>
+    </section>
+
+    <section class="chart">
+      <h2>Resumen Estadístico</h2>
+      <canvas id="chartResumen"></canvas>
+    </section>
+  </main>
+
+  <script src="dashboard.js" type="module"></script>
+  <script>
+    // Botón Cerrar Sesión
+    const btnCerrarSesion = document.getElementById("btnCerrarSesion");
+    btnCerrarSesion.addEventListener("click", () => {
+      // Limpia datos si es necesario
+      localStorage.clear();
+      // Redirige al login
+      window.location.href = "../login/login.html";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reportes y Estadísticas</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Reportes y Estadísticas</h1>
+    <button onclick="location.href='../dashboard/dashboard.html'">Volver al Panel</button>
+  </header>
+  <main>
+    <section class="cards">
+      <div class="card"><h3>Prácticas Activas</h3><p id="activas">30</p></div>
+      <div class="card"><h3>Prácticas Finalizadas</h3><p id="finalizadas">10</p></div>
+      <div class="card"><h3>Prácticas Pendientes</h3><p id="pendientes">5</p></div>
+      <div class="card"><h3>Total</h3><p id="total">45</p></div>
+    </section>
+
+    <section class="chart">
+      <h2>Estado de las Prácticas</h2>
+      <canvas id="graficoPie"></canvas>
+    </section>
+
+    <section class="chart">
+      <h2>Prácticas por Empresa</h2>
+      <canvas id="graficoBarras"></canvas>
+    </section>
+
+    <section class="chart">
+      <h2>Tendencia Mensual</h2>
+      <canvas id="graficoLineas"></canvas>
+    </section>
+  </main>
+  <script src="reportes.js" type="module"></script>
+</body>
+</html>

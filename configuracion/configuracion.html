@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Configuración del Sistema</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <h1>Configuración del Sistema</h1>
+    <button onclick="location.href='../dashboard/dashboard.html'">Volver al Panel</button>
+  </header>
+
+  <main>
+    <div class="config-container">
+      <section class="config-section">
+        <h2>Parámetros Académicos</h2>
+        <form id="formConfig">
+          <label>
+            Horas requeridas de práctica:
+            <input type="number" id="horas" value="240" min="1" max="1000" required>
+          </label>
+          <label>
+            Período académico:
+            <input type="text" id="periodo" value="2025(2)" required>
+          </label>
+          <label>
+            Fecha inicio de prácticas:
+            <input type="date" id="fechaInicio" required>
+          </label>
+          <label>
+            Fecha fin de prácticas:
+            <input type="date" id="fechaFin" required>
+          </label>
+          <button type="submit" class="btn-primary">Guardar Configuración</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="configuracion.js" type="module"></script>
+</body>
+</html>

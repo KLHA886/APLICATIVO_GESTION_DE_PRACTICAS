@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gestión de Tutores</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gestión de Tutores</h1>
+    <button onclick="location.href='../dashboard/dashboard.html'">Volver al Panel</button>
+
+  </header>
+  <main>
+    <div class="controls">
+      <input id="search" type="text" placeholder="Buscar tutor...">
+      <button id="btnNuevo" class="btn-primary">+ Nuevo Tutor</button>
+    </div>
+    
+    <table id="tabla">
+      <thead>
+        <tr>
+          <th>Cédula</th>
+          <th>Nombre</th>
+          <th>Especialidad</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  
+  <div id="modal" class="modal" style="display:none">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Nuevo Tutor</h2>
+      <form id="formTutor">
+        <label>Cédula: <input type="text" id="cedula" required pattern="[0-9]{10}"></label>
+        <label>Nombre: <input type="text" id="nombre" required></label>
+        <label>Especialidad: <input type="text" id="especialidad" required></label>
+        <label>Email: <input type="email" id="email" required></label>
+        <label>Teléfono: <input type="text" id="telefono" required pattern="[0-9]{9,10}"></label>
+        <button type="submit" class="btn-primary">Guardar</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="tutores.js" ></script>
+</body>
+</html>
