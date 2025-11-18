@@ -32,20 +32,34 @@
     </table>
   </main>
   
-  <div id="modal" class="modal" style="display:none">
+  <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2 id="modalTitle">Nueva Empresa</h2>
+
       <form id="formEmpresa">
-        <label>RUC: <input type="text" id="ruc" required pattern="[0-9]{13}" maxlength="13"></label>
-        <label>Nombre: <input type="text" id="nombre" required></label>
-        <label>Contacto: <input type="text" id="contacto" required></label>
-        <label>Teléfono: <input type="text" id="telefono" required pattern="[0-9]{9,10}" maxlength="10"></label>
+        <label>RUC: 
+          <input type="text" id="ruc" required maxlength="13" pattern="[0-9]{13}">
+        </label>
+
+        <label>Nombre:
+          <input type="text" id="nombre" required>
+        </label>
+
+        <label>Contacto:
+          <input type="text" id="contacto" required>
+        </label>
+
+        <label>Teléfono:
+          <input type="text" id="telefono" required maxlength="10" pattern="[0-9]{10}">
+        </label>
+
         <button type="submit" class="btn-primary">Guardar</button>
       </form>
+
     </div>
   </div>
   
-  <script src="empresas.js" ></script>
+  <script src="empresas.js"></script>
 </body>
 </html>
